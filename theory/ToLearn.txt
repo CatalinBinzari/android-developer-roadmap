@@ -1,0 +1,3 @@
+ce este o R-class
+ce este android debug bridge
+proiect care face backup

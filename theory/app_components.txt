@@ -1,0 +1,38 @@
+Activities: dicteaza UI si handle interactiunea utilizatorului cu ecranul smathphoneului
+Services: handle background procese asociate cu aplicatia
+Brodcast receivers: handle(suporta) comunicarea intre Android OS si aplicatia
+Content providers:	suporta data si database management issues
+
+Activitatea reprezinta un singur ecran cu un UI,
+	pe scurt activitatea performa actiuni pe ecran
+	De exemplu o aplicatie de email are o activitate ce performs(efectueaza) actiuni,
+	o alta activitate care compune un email, alta care citeste emailuri
+	Daca o aplicatie are mai multe activitati, trebuie specificata una atunci cand aplicatia este pornita
+	Activitatea este implementata ca o subclasa a clasei Activity
+
+Services este un component care ruleaza in background sa efectueze operatii de lunga durata
+	de exemplu un serviciu ce trebuie sa play music in background in timp ce utilizatorul este in alta aplicatie, sau poate fetch(aduce)
+	data din retea(descarca ceva) fara a bloca interactiunea utilizatorului cu activitatea
+	Serviciul este implementat ca o subclasa a clasei Service
+
+Brodcast receivers raspunde sa Brodcast(raspandeasca)  mesajele dintr-o aplicatie sau sistem. 
+	Exemplu, aplicatiile pot initializa Brodcasturi sa permita alte aplicatii sa stie ca ceva informatii au  fost descarcate
+	pe dispozitiv si sunt disponibile a fi utilizate, deci Brodcast receiver este cel ce va intercepta aceasta comunicare 
+	si va initializa actiuni apropiate
+	A broadcast receiver is implemented as a subclass of BroadcastReceiver class and each message is broadcaster as an Intent object.
+
+Content providers aprovizioneaza informatia dintr-o aplicatie in altele cu requesturi.
+	tipurile de requesturi(cereri) sunt suportate de metode  a clasei ContentResolver .
+	informatia este stocata in file system, baza de date, sau in alta parte
+	A content provider is implemented as a subclass of ContentProvider class 
+	and must implement a standard set of APIs that enable other applications to perform transactions.
+
+
+Mai sunt alte componente utilizate in entitatile, logica si unirea lor:
+	Fragments - reprezinta o portiune din UI ale unei Activity
+	Views  - UI le va implementa ca desenand pe ecran, ca butoane, liste
+	Layouts - baza erarhiei ce contoleaza formatul ecranului si aparitia view-urilor
+	Intents - mesaje ce unesc componentele impreuna
+	Resurse - elemente externe, ca stringuri, constante si picturi desentate
+	Manifest - fisierul de configurare al aplicatiei
+

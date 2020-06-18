@@ -1,0 +1,10 @@
+Fiecare proiect trebie sa aiba un AndroidManifest.xml in project source.
+
+DEF: Fisierul Manifest descrie in informatia esentiala despre aplicatia ta in Android build tools, Android op system si Google Play.
+
+Manifest fisierul va declara:
+	- Denumirea package-ului(care de obicei e si namespace-ul),
+			 Android build tools use this to determine the location of code entities when building your project.
+	- The components of the app, which include all activities, services, broadcast receivers, and content providers.
+	- The permissions that the app needs in order to access protected parts of the system or other apps.
+	- The hardware and software features the app requires, which affects which devices can install the app from Google Play

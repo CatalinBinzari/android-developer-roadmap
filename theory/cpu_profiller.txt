@@ -1,0 +1,30 @@
+DEF:	"Profiller tools" ajuta sa optimizezi executia unui program. (exemple GNU gprof
+
+	Pentru a mari timpul de executie, gasim cea mai grea functie si o rescriem,insa nu e mereu posibil
+
+Deci cum programele sunt profiled?
+	Masurand timpul de executie a programului noi folosim instrumentre de profilizare.
+	Insarcinarea unui profiller este sa masoare utilizarea resurselor folosite in cadrul unui program.
+		(in cazul nostru timpul de executie a programului)
+
+	Un profiler  trebuie sa recorze ce functii au fost implicate si cate ori s-a executat functia
+	Cea mai usoara cale pentru a face asta e sampling-ul.
+		 When using this method(sampling), a profiler interrupts program execution at specified intervals and logs the state of program’s call stack. 
+		 The problem with sampling is that even with hardware support it’s not 100% accurate.
+		 The great benefit of the sampling approach is that it almost doesn’t affect program execution, 
+		 so it can be successfully used in production environment.
+
+	Cea mai precisa cale spre profiling este instrumentatia(Instrumentation)
+		A face o instrumentare inseamna a inserta un cod special ce apeleaza calcularea timpului de executie
+			in prologul si epilogul functiilor.
+		The problem with this approach is that it can seriously skew the results of profiling.
+			Consider a function which takes just a dozen CPU cycles to execute and 
+			add another dozen of cycles due to instrumentation—now
+			the instrumented function runs twice as long as the original version! 
+
+	Afisarea rezultatelor
+		Raw data collected during a profiling session needs to be presented in some compact and useful way. (in stack traces)
+		. A call stack is a sequence of function calls: from the currently executed function up to the program’s entry point.
+
+util: https://stackoverflow.com/questions/8217500/how-to-print-stacktrace-for-an-exception-android
+

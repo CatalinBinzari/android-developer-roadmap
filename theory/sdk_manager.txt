@@ -1,0 +1,8 @@
+Pentru a downloada si instala ultimul API si development tools din intrnet,android ofera un sdk manager,
+	ce poate fi gasit la:		android->tools-> sdk manager
+Android SDK manager separa API, tools si diferite platforme in diferite packageuri care pot fi descarcate
+
+Android SDK manager vine cu Android SDK bundle
+
+Noi putem selecta ce packageuri cu SDK manager dorim noi
+By default SDK Manager keeps it up to date with latest APIs and other packages.
