@@ -8,3 +8,4 @@ Manifest fisierul va declara:
 	- The components of the app, which include all activities, services, broadcast receivers, and content providers.
 	- The permissions that the app needs in order to access protected parts of the system or other apps.
 	- The hardware and software features the app requires, which affects which devices can install the app from Google Play
+
